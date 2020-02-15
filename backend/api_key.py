@@ -1,0 +1,1 @@
+GCP_KEY = "AIzaSyCw_3pcvHzyWVhepo2aqfubkOnlJFh1oj0"
