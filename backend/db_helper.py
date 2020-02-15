@@ -5,7 +5,6 @@ class DBHelper:
     def __init__(self):
         self.mongocollection = db.posts
 
-
     def get_posts(self):
         cursor = self.mongocollection.find({})
         post_objects = []
@@ -20,5 +19,9 @@ class DBHelper:
     def insert_post(self, post):
         self.mongocollection.insert_one(post)
 
-test = DBHelper()
-print(test.get_posts())
+    def get_sentiments(self):
+        pass
+
+if __name__ == "__main__":
+    test = DBHelper()
+    print(test.get_posts())

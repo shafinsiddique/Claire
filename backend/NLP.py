@@ -5,10 +5,10 @@ import os
 from nltk.corpus import stopwords
 import nltk
 from nltk import FreqDist
-# nltk.download()
+# import boto3
 # Instantiates a client
+# aws_client = boto3.client("comprehend")
 os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'HackTheValley-f1afcc1d51aa.json'
-
 client = language.LanguageServiceClient()
 
 def remove_stopwords(word_list):

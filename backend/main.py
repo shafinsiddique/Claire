@@ -5,7 +5,7 @@ from db_helper import DBHelper
 app = Flask(__name__)
 db = DBHelper()
 
-@app.route('/get_posts',methods=['GET'])
+@app.route('/',methods=['GET'])
 def get_posts():
     return jsonify(db.get_posts())
 
@@ -20,8 +20,6 @@ def insert_post():
 def get_sentiment():
     return jsonify(db.get_sentiments())
 
-
-@app.route('/')
 
 
 
