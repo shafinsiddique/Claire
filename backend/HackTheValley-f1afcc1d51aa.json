@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hackthevalley-268318",
+  "private_key_id": "f1afcc1d51aae82da7fade691b597a5591a12e8e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCbtKr956CqLbvf\npFFyXMd8j0eo2Mw90pgEb6eHjwsKW6YMQyFVoUCIofC9mTuC7kMOvzPdBM/keXEb\nVuO+sNraQzBj5fYHQLBhI0YoClfwSPD8nGMpIvo07dlyq1X9AlAgsptwhFp8njOR\nSQ0nhoNfAJtQ7y2LrHrHoGL89NFqJ1AbWVat7s66DaOCwysNwVjORW3kgEx4wHOO\nlQmV/FM5/vn2SQ1SMuNyBDGnTIy0DX7DfAmHspyemI8XS49nnpHz2WDrvd38pT1m\nRCtN2dkwJmXhOw42TeIAXuKHccdR4QiDZjgbSLE9uzG5Z+kQUFk69AG/bv3fHSmO\nMgNSBfLPAgMBAAECggEAGg0XUtXvPqnaNifS7LRzN/btAWYMfgd/Ibbgq8CWE0yU\nMpcEu8P3/SRDGCXMHDLrC0uYTNFiSxK6ht15y0zhwQTe0sgF6t664/W35jkcz3oU\nv98WhCpy/GoTKKlcALHjYCUh9qheT11UuWkkh0ltL3b1hYwO7cCU5lOCXFpFs2HP\np0pJKKGmfLStWYICUwijszRk0lnMqqWhtisUHF+Dq/wVMUy1J0Wf8HTU8/MJ715c\nw6aUzLgYVksk3yulp/yyICHU13iifC3ECWp8tp1t5i4B99OxKK5YNsP4XyVzjnLX\nMssvDSkK9R3KQAp9pPmjNXBk+qs2JFQWk3SFgRtt2QKBgQDKzAkz3q9Tvh6us/WY\nRsr6/6lYnSIuc3Kmg+MLtGTWVCdVLGF6YL7tPNcPLEM2TlA6jF0Gdx0t1x/GbcAn\nICgOMmQ4EvjEkQsfZFPOYJ5UpW2cHK5rb3uwNrYW8NDdWEEuD+VEGlOPXpKA9UeS\nccAzYLmGxMCx4pKyWQAOsIMHywKBgQDEjfRZL8rWAXx2E29TS7DkVhEe/0Hv4Gie\nSEojP85CSQC69ZzOaJMaCyI42icDpWZRr61TKU+HzFEXDeC+pfaj9Iq7mVkqxYFp\nOjdhr+WEyNO6Jwj1gn72/1RwdlgCGEsKt87jmymRI84YdEMh+/3B/tiHp7l2C5Is\nImv/SSr4jQKBgGpkLJfHxdd7MIGa68edrDOOGPviQ+J2srllC6JCW3yN3ayzgdhA\nFSpE9taA9CnzX+e3Z75Skz5PU944Ccz888au7SD14wjMxzcK3WSyD558w0pZSbAX\nZp6FtXXHlOvqtxdBQ5g874WRqe55v7i2cI0Du5FWe3lXUnq6cmtCcxuNAoGAIqMV\nZUYby3y1jyU7oAUdpg9YswqudvQn24THs9CBq4Kr40Z3HJSnH5bIsBYZe/YAwvJf\na+FCx56Ex7hFW7NpdFkavZZ3dSca+A0vR0K1AqJVVV+dn44gi6xRGARy2+OmDbx4\nc/ma6J3TqtGKJwn+HNqpE7bF4vyFBMwIFhOxw90CgYEAnDx1K5G9jQKie7x303JP\n/G7aGl30zhS1/Oy5JtEw8J2Z+qDpRb7YDT25bnQR7cto/CscVxci+u6hu/gYxeOB\nY0hBwIM9ADtD+qvWSgde3Iz80tmtx77tvMJd4X18eRz5r1NVHI7xekfUWqbz/AFh\nBOa46jRIx26nQvTVLuXSkCE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "hackthevalley@hackthevalley-268318.iam.gserviceaccount.com",
+  "client_id": "101710554199117470351",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hackthevalley%40hackthevalley-268318.iam.gserviceaccount.com"
+}

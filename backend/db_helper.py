@@ -12,6 +12,5 @@ class DBHelper:
 
     def insert_post(self, post):
         # insert <post> into the db.
-
         pass
 
