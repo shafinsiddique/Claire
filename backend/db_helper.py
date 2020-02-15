@@ -1,11 +1,16 @@
 from pymongo import MongoClient
 
 class DBHelper:
-    def __init__(self):
-        # set up the connection and the collection.
+    def __init__(self, mongocollection):
+        self.mongocollection = mongocollection
         pass
 
     def get_posts(self):
+        # cursor = self.mongocollection.find({})
+        # post_objects = []
+        # for posts in cursor:
+        #     post_objects.append()
+
         # return a list of all the post objects. List of dicitonaries
         # [{"name":"my first blog", "date": "22 Oct, 1999", "id"=1}]
         pass
@@ -14,4 +19,3 @@ class DBHelper:
         # insert <post> into the db.
 
         pass
-
