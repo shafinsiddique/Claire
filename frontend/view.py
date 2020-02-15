@@ -1,8 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
 
 app = Flask(__name__)
-@app.route('/',methods=['GET'])
-
+@app.route('/',methods=['GET','POST'])
 def home():
-    return render_template("index.html")
+    if request.method == "GET":
+        return render_template("index.html")
+    else:
+        pass # do something else.
+
 
