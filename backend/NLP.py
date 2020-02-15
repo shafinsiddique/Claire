@@ -9,10 +9,8 @@ client = language.LanguageServiceClient()
 
 # The text to analyze
 text = 'I am extremely depressed. Over the last few weeks, i hav ebeen feeling very sick.'
-document = types.Document(
-    content=text,
-    type=enums.Document.Type.PLAIN_TEXT)
-
+document = types.Document(content=text, type=enums.Document.Type.PLAIN_TEXT)
+m
 sentiment = client.analyze_sentiment(document=document)
 
 print(sentiment)

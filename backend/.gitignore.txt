@@ -1,2 +1,0 @@
-HackTheValley-f1afcc1d51aa.json
-api_key.py
