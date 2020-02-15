@@ -5,5 +5,3 @@ app = Flask(__name__)
 
 def posts():
     return {"message":"success"}
-
-

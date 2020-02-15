@@ -1,4 +1,7 @@
 {% extends "layout.html" %}
-{% for items in item %}
-<p>{{items}}</p>
+{% block content %}
+{% for item in items %}
+<p>{{item}}</p>
+
 {% endfor %}
+{% endblock %}
