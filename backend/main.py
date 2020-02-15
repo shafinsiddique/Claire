@@ -7,6 +7,3 @@ def posts():
     return {"message":"success"}
 
 
-
-
-
