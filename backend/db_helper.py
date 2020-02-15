@@ -1,21 +1,24 @@
 from pymongo import MongoClient
+cluster = MongoClient("mongodb+srv://skowser:<hackthevalley>@htv4-b4c1r.mongodb.net/test?retryWrites=true&w=majority")
+db = cluster['htv4']
+collection = db['htv4']
 
 class DBHelper:
     def __init__(self, mongocollection):
         self.mongocollection = mongocollection
-        pass
+
 
     def get_posts(self):
-        # cursor = self.mongocollection.find({})
-        # post_objects = []
-        # for posts in cursor:
-        #     post_objects.append()
+        cursor = self.mongocollection.find({})
+        post_objects = []
 
-        # return a list of all the post objects. List of dicitonaries
-        # [{"name":"my first blog", "date": "22 Oct, 1999", "id"=1}]
-        pass
+        for posts in cursor:
+            post_objects.append(posts)
+
+        return post_objects
 
     def insert_post(self, post):
-        # insert <post> into the db.
+        self.mongocollection.insert_one(post)
 
-        pass
+test = DBHelper(collection)
+print(test.get_posts())
