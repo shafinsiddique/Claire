@@ -7,10 +7,12 @@ os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'HackTheValley-f1afcc1d51aa.json'
 
 client = language.LanguageServiceClient()
 
-# The text to analyze
-text = 'I am extremely depressed. Over the last few weeks, i hav ebeen feeling very sick.'
-document = types.Document(content=text, type=enums.Document.Type.PLAIN_TEXT)
-m
-sentiment = client.analyze_sentiment(document=document)
+def get_sentiment(text):
+    """Get the sentiment score for a certain text from the GCP API."""
+    document = types.Document(content=text, type=enums.Document.Type.PLAIN_TEXT)
 
-print(sentiment)
+    sentiment = client.analyze_sentiment(document=document)
+
+    return sentiment
+
+
