@@ -18,3 +18,10 @@ class DBHelper:
     def insert_post(self, post):
         # insert <post> into the db.
         pass
+
+
+    def get_sentiments(self):
+        """Return a list of lists [a, b] in which a = date of the post, b = sentiment score
+        for that post. One tuple for each post."""
+        pass
+
