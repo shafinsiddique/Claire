@@ -13,7 +13,6 @@ def get_sentiment(text):
     sentiment = client.analyze_sentiment(document=document).document_sentiment
     return sentiment.score
 
-
 if __name__ == "__main__":
     pass
 
