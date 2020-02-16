@@ -15,17 +15,11 @@ def new_post():
     # post=Post(title=form.title.data, content = form.content.data, date = datetime.now())
     if request.method == "POST":
         pass
-
-    return render_template("new_entry.html")
+    return render_template("insert.html")
 
 @app.route("/analytics")
 def analytics():
-    sentiments = requests.get("https://hackthevalley.herokuapp.com/sentiment").json()
-    senti_vals = []
-    for entry in sentiments:
-        currVal = float(entry[1])
-        senti_vals.append(currVal)
-    return render_template("analytics.html", sentiment_values = senti_vals)
+    return render_template("analytics.html")
 
  #@app.route('/post/<post_id>')
 ## def post(post_id):
