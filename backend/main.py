@@ -4,6 +4,8 @@ import datetime
 from db_helper import DBHelper
 from youtube_query import get_link
 from NLP import get_sentiment
+from twitter_api import get_urls
+from youtube_query import get_key_phrases
 app = Flask(__name__)
 db = DBHelper()
 from youtube_query import detect_text_uri
@@ -51,6 +53,11 @@ def photo_convert():
     db.insert_post(post)
     return jsonify(db.get_posts())
 
+@app.route('/tweet',methods=['POST'])
+def tweets():
+    content = request.form['content']
+    key_phrases = get_key_phrases(content)
+    return get_urls(key_phrases)
 
 if __name__ == "__main__":
     # print(get_sentiment("Hello World"))
