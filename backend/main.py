@@ -51,6 +51,7 @@ def photo_convert():
     db.insert_post(post)
     return jsonify(db.get_posts())
 
+
 if __name__ == "__main__":
     # print(get_sentiment("Hello World"))
     app.run(debug=False)
