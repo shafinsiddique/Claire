@@ -34,3 +34,13 @@ class DBHelper:
             sentiments.append(pair)
 
         return sentiments
+
+    def get_latest_id(self):
+        posts = self.get_posts()
+        ids = []
+        for i in posts:
+            ids.append(i['post_id'])
+
+        return max(ids)+1
+
+
