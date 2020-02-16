@@ -26,11 +26,10 @@ def insert_post():
         print(post)
         db.insert_post(post)
         content = content.split(".")
-        urls = [get_link(sentence) for sentence in content]
+        urls = [get_link(sentence) for sentence in content if sentence is not None]
         return jsonify(urls)
 
     return jsonify(db.get_posts())
-
 
 
 @app.route('/sentiment',methods=['GET'])

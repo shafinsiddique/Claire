@@ -8,8 +8,18 @@ def get_link(sentence):
                               type='video',
                               maxResults=5)
     res = req.execute()
-    return "https://www.youtube.com/embed/" + res['items'][0]['id']['videoId']
+    try:
+        return "https://www.youtube.com/embed/" + res['items'][0]['id']['videoId']
+
+    except:
+        pass
+
 
 def get_tweets(sentence):
-    
-print(get_link("The Avengers: Tony Stark"))
+    pass
+
+if __name__ == "__main__":
+    pass
+
+
+
