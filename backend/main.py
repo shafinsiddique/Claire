@@ -17,7 +17,7 @@ def insert_post():
 
 @app.route('/sentiment',methods=['GET'])
 def get_sentiment():
-    return jsonify(db.get_sentiments())
+    return jsonify(db.get_sentiment())
 
 
 
