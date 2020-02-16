@@ -7,7 +7,6 @@ class DBHelper:
     def __init__(self):
         self.mongocollection = db.posts
 
-
     def get_posts(self):
         cursor = self.mongocollection.find({})
         post_objects = []
@@ -36,7 +35,3 @@ class DBHelper:
             sentiments.append(pair)
 
         return sentiments
-
-test = DBHelper()
-shafin = test.get_sentiment()
-print(shafin)

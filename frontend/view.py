@@ -14,7 +14,7 @@ def home():
 @app.route("/post/new", methods = ['GET', 'POST'])
 def new_post():
     # post=Post(title=form.title.data, content = form.content.data, date = datetime.now())
-    return render_template("create_post.html")
+    return render_template("new_entry.html")
 
 @app.route("/analytics")
 def analytics():
