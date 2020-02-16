@@ -7490,6 +7490,8 @@ button.bg-dark:focus {
   margin-right: 0.5rem !important;
 }
 
+
+
 .mb-2,
 .my-2 {
   margin-bottom: 0.5rem !important;
@@ -7508,6 +7510,7 @@ button.bg-dark:focus {
 .my-3 {
   margin-top: 1rem !important;
 }
+
 
 .mr-3,
 .mx-3 {
@@ -9874,6 +9877,11 @@ a:focus {
 .progress-sm {
   height: .5rem;
 }
+
+#ripon{
+  color: red;
+}
+
 
 .rotate-15 {
   transform: rotate(15deg);

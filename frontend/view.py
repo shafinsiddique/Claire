@@ -32,5 +32,11 @@ def analytics():
         dates.append(currDate)
         senti_vals.append(currVal)
 
-    return render_template("analytics.html", sentiment_values = senti_vals, dates = dates)
+    total = len(dates)
+    change = senti_vals[-1]-senti_vals[-2]
+    change = round(change, 3)
+    average = sum(senti_vals)/len(senti_vals)
+    average = str(round(average,2))
+
+    return render_template("analytics.html", sentiment_values = senti_vals, dates = dates, total = total, change = change, average = average)
 

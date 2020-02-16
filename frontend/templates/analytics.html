@@ -9,7 +9,7 @@
     <meta content="" name="description">
     <meta content="" name="author">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Recharge</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -31,9 +31,13 @@
             <!-- Main Content -->
             <div id="content">
 
+                <div id = "navbarMAIN">
+
+
+
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
+                          <span id="ripon">RECHARGE</span>
                     <!-- Sidebar Toggle (Topbar) -->
                     <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop">
                         <i class="fa fa-bars"></i>
@@ -53,10 +57,17 @@
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
+
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
+
                             <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="userDropdown" role="button">
+
+
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Steven Bullah</span>
+
+
                                 <img class="img-profile rounded-circle" src="../static/img/bullah.jpg">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -65,6 +76,7 @@
                     </ul>
 
                 </nav>
+                    </div>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -84,9 +96,9 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Earnings (Monthly)
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Entries
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{total}}</div>
                                         </div>
 
                                     </div>
@@ -100,9 +112,9 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Earnings (Annual)
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Streak
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">3</div>
                                         </div>
 
                                     </div>
@@ -116,10 +128,10 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Sentiment Change</div>
                                             <div class="row no-gutters align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{change}}</div>
                                                 </div>
                                                 <div class="col">
 
@@ -138,9 +150,9 @@
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Average Sentiment
                                             </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{average}}</div>
                                         </div>
 
                                     </div>
@@ -217,30 +229,55 @@
                             </div>
                         </div>
 
-                        <!-- Pie Chart -->
+                        <!-- Bar Chart -->
                         <div class="col-xl-4 col-lg-5">
                             <div class="card shadow mb-4">
                                 <!-- Card Header - Dropdown -->
                                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Keywords</h6>
 
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body">
                                     <div class="chart-pie pt-4 pb-2">
-                                        <canvas id="myPieChart"></canvas>
+                                        <canvas height="25" id="myChart2" width="100"></canvas>
+                                        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+                                        <script>
+                                            var ctx = document.getElementById("myChart2");
+                                            var dates = [];
+                                            var sentiment_values = [];
+
+                                            "{% for val in sentiment_values %}"
+                                            sentiment_values.push("{{val}}");
+                                            "{% endfor %}"
+
+                                            "{% for val in dates %}"
+                                            dates.push("{{val}}");
+                                            "{% endfor %}"
+
+                                            var myChart = new Chart(ctx, {
+                                                type: 'bar',
+                                                data: {
+                                                    labels: ["January", "February", "March", "April", "May", "June"],
+                                                    datasets: [{
+                                                        label: "Revenue",
+                                                        backgroundColor: "#4e73df",
+                                                        hoverBackgroundColor: "#2e59d9",
+                                                        borderColor: "#4e73df",
+                                                        data: [4215, 5312, 6251, 7841, 9821, 14984]
+                                                    }],
+                                                },
+
+                                                options: {
+                                                    legend: {
+                                                        display: false
+                                                    },
+                                                },
+                                            });
+                                        </script>
                                     </div>
-                                    <div class="mt-4 text-center small">
-                                        <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> Direct
-                    </span>
-                                        <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Social
-                    </span>
-                                        <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> Referral
-                    </span>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
