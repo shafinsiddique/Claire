@@ -54,3 +54,7 @@ def test():
 @app.route("/insert")
 def insert():
     return render_template("insert.html")
+
+@app.route("/upload")
+def upload():
+    return render_template("upload.html")
