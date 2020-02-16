@@ -15,15 +15,16 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="navbarNavDropdown" class="navbar-collapse collapse">
+        <div id="navbarToggle" class="navbar-collapse collapse">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">My Posts</a>
-                </li>
+                <div class="navbar-nav mr-auto">
+                    <a class="nav-item nav-link" href="{{ url_for('home') }}">My Posts</a>
+                    <a class="nav-item nav-link" href="#">New Entry</a>
+                    <a class="nav-item nav-link" href="{{ url_for('analytics') }}">Analytics</a>
+                </div>
             </ul>
         </div>
     </nav>
-
 
 </div>
 <br><br>
