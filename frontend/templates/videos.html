@@ -123,11 +123,18 @@
                         </div>
                     </div>
 
-                    {%block content%} {%for video in urls%}
+                    <div class="container">
+                    <div class="row justify-content-center">
+                     <div class="col-8 text-center">
+                              {%block content%} {%for video in urls%}
 
                     <iframe width="560" height="315" src={{video}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                     {% endfor %} {% endblock %}
+                     </div>
+                    </div>
+                    </div>
+
 
                 </div>
 
