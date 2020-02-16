@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
 import requests
-from NLP import get_sentiment
 from db_helper import DBHelper
 app = Flask(__name__)
 db = DBHelper()
@@ -22,9 +21,8 @@ def get_sentiment():
 
 
 
-
-
-
+if __name__ == "__main__":
+    app.run(debug=False)
 
 
 
