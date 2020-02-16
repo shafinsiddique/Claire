@@ -3,23 +3,13 @@ from flask import Flask, render_template, url_for, flash, redirect, request, app
 #from frontend import app, db, bcrypt
 #from models import User, Post
 from datetime import datetime
-
+import requests
 
 app = Flask(__name__)
-@app.route('/')
-
-@app.route("/home", methods = ['GET'])
+@app.route("/", methods = ['GET'])
 def home():
-
-    entries = [
-    {'title': 'First Entry',
-    'content': 'This is the content',
-    'date': 'January 20, 2020'},
-    {'title': 'Second Entry',
-    'content': 'This is the content',
-    'date': 'January 23, 2020'},
-    ]
-    return render_template("home.html", posts=entries)
+    return render_template("home.html",
+                           posts=requests.get("https://hackthevalley.herokuapp.com/").json())
 
 @app.route("/post/new", methods = ['GET', 'POST'])
 def new_post():
@@ -30,7 +20,6 @@ def new_post():
 def analytics():
     return render_template("analytics.html")
 
- @app.route('/post/<post_id>')
 # def post(post_id):
 #     post = Post.query.get_or_404(post_id)
 #     return render_template("post.html", title=post.title, post=post)
