@@ -42,9 +42,9 @@ def blank():
     average = str(round(average, 2))
     posts = requests.get("https://hackthevalley.herokuapp.com/").json()
     newest = []
-    newest.append(posts[-3])
-    newest.append(posts[-2])
     newest.append(posts[-1])
+    newest.append(posts[-2])
+    newest.append(posts[-3])
 
     return render_template("blank.html", posts=newest, sentiment_values = senti_vals, dates = dates, total = total, change = change, average = average)
 
