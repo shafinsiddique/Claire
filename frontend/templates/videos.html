@@ -58,15 +58,6 @@
             position: absolute;
             right: 8%;
         }
-
-        h6 {
-            font-size: 22px;
-            color: dimgrey;
-        }
-
-        h7 {
-            font-size: 18px;
-        }
     </style>
 
 </head>
@@ -114,58 +105,61 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="col-sm-8">
-                    <div class="col-sm-8">
+                <div class="container">
 
-                        <!-- Page Heading -->
-                        <div class=".col-sm-5 .col-md-6">
-                            <h1 class="h3 mb-0 text-gray-800">Homepage</h1>
-                            <span><br></span>
-                        </div>
-
-                        {% for post in posts %}
-
-                        <div class="card shadow mb-4 maincustom2">
-                            <div class="card-header py-3 card-header-custom1">
-                                <h6 class="m-0 font-weight-bold">{{ post.title }}</h6>
-                            </div>
-                            <div class="card-body">
-                                <h7>{{ post.content }}</h7>
-
-                            </div>
-                        </div>
-                        {% endfor %}
+                    <!-- Page Heading -->
+                    <div class=".col-sm-5 .col-md-6">
+                        <h1 class="h3 mb-0 text-gray-800">New Entry Recorded</h1>
+                        <span><br></span>
                     </div>
 
+                    <div class="card shadow mb-4 maincustom2">
+                        <div class="card-header py-3 card-header-custom1">
+                            <h6 class="m-0 font-weight-bold">{{title}}</h6>
+                        </div>
+                        <div class="card-body">
+                            <h7>{{ content }}</h7>
+
+                        </div>
+                    </div>
+
+                    {%block content%} {%for video in urls%}
+
+                    <iframe width="560" height="315" src={{video}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                    {% endfor %} {% endblock %}
+
                 </div>
+
             </div>
-            <!-- End of Content Wrapper -->
-
         </div>
-        <!-- End of Page Wrapper -->
+        <!-- End of Content Wrapper -->
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
+    </div>
+    <!-- End of Page Wrapper -->
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="../vendor/jquery/jquery.min.js"></script>
-        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
-        <!-- Core plugin JavaScript-->
-        <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="../js/sb-admin-2.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Page level plugins -->
-        <script src="../vendor/chart.js/Chart.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin-2.min.js"></script>
 
-        <!-- Page level custom scripts -->
-        <script src="../js/demo/chart-area-demo.js"></script>
+    <!-- Page level plugins -->
+    <script src="../vendor/chart.js/Chart.min.js"></script>
 
-        <script src="../js/demo/chart-pie-demo.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="../js/demo/chart-area-demo.js"></script>
+
+    <script src="../js/demo/chart-pie-demo.js"></script>
 
     </div>
     </div>
