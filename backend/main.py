@@ -27,6 +27,7 @@ def insert_post():
         db.insert_post(post)
         content = content.split(".")
         urls = [get_link(sentence) for sentence in content]
+        return jsonify(urls)
 
     return jsonify(db.get_posts())
 

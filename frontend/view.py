@@ -19,7 +19,7 @@ def new_post():
         print(data)
         response = requests.post("https://hackthevalley.herokuapp.com/insert",data=data)
         print(response)
-        return render_template("home.html",posts=requests.get("https://hackthevalley.herokuapp.com/").json())
+        return render_template("home.html",content=content,urls=response.json())
     else:
         return render_template("insert.html")
 
