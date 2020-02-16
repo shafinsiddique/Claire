@@ -6,6 +6,7 @@ from youtube_query import get_link
 from NLP import get_sentiment
 app = Flask(__name__)
 db = DBHelper()
+from youtube_query import detect_text_uri
 
 @app.route('/',methods=['GET'])
 def get_posts():
@@ -35,6 +36,20 @@ def insert_post():
 @app.route('/sentiment',methods=['GET'])
 def sentiment():
     return jsonify(db.get_sentiment())
+
+@app.route('/photo/',methods=['POST'])
+def photo_convert():
+    url = request.form['url']
+    print(url)
+    post = {}
+    post['content'] = detect_text_uri(url)
+    post['sentiment'] = get_sentiment(post['content'])
+    post['title'] = ""
+    post['post_id']= db.get_latest_id()
+    now = datetime.datetime.now()
+    post['date'] = now.strftime("%m/%d/%Y")
+    db.insert_post(post)
+    return jsonify(db.get_posts())
 
 if __name__ == "__main__":
     # print(get_sentiment("Hello World"))
