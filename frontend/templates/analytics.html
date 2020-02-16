@@ -18,6 +18,42 @@
     <!-- Custom styles for this template-->
     <link href="../static/sb-admin-2.min.css" rel="stylesheet">
 
+     <style>
+
+         .navbar-custom99{
+
+             background-color: #8084e0;
+             height: 120px;
+         }
+
+/*css override */
+
+         #userDropdown, #userDropdown2, #userDropdown3{
+             position: absolute;
+             bottom: 22%;
+             font-size: 20px;
+             font-weight: bolder;
+             color:white;
+         }
+
+         #userDropdown{
+             position: absolute;
+             right: 24%;
+         }
+
+         #userDropdown2{
+             position: absolute;
+             right: 16%;
+         }
+
+         #userDropdown3{
+             position: absolute;
+             right: 8%;
+         }
+
+
+    </style>
+
 </head>
 
 <body id="page-top">
@@ -31,52 +67,35 @@
             <!-- Main Content -->
             <div id="content">
 
-                <div id = "navbarMAIN">
+                 <div id="navbarMAIN">
 
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow navbar-custom99">
+<!--                        <a class="nav-link" href="home" id="logo" class="navbar-left"><img src = "/static/claire.png">-->
+<!--                          -->
+<!--                        </a>-->
 
+                        <a class="navbar-brand" href="#"><img alt="Brand" src="/static/1finalclaire.png" class="img-responsive" /></a>
 
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                          <span id="ripon" onclick="window.location.href='blank  ';">RECHARGE</span>
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop">
-                        <i class="fa fa-bars"></i>
-                    </button>
+                        <a class="nav-link" href="analytics" id="userDropdown" role="button" >
+                            <span class="mr-2 d-none d-lg-inline">DASHBOARD</span>
+                          </a>
 
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                         <a class="nav-link" href="blank" id="userDropdown2" role="button" >
+                            <span class="mr-2 d-none d-lg-inline">HOMEPAGE</span>
+                          </a>
+                           <a class="nav-link" href="new_entry" id="userDropdown3" role="button" >
+                            <span class="mr-2 d-none d-lg-inline">NEW POST</span>
+                          </a>
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop">
+                            <i class="fa fa-bars"></i>
+                        </button>
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="searchDropdown" role="button">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
+                        <!-- Topbar Navbar -->
 
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-
-                            <a aria-expanded="false" aria-haspopup="true" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" id="userDropdown" role="button">
-
-
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Steven Bullah</span>
-
-
-                                <img class="img-profile rounded-circle" src="../static/img/bullah.jpg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                        </li>
-
-                    </ul>
-
-                </nav>
-                    </div>
+                    </nav>
+                </div>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
