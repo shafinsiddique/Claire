@@ -12,9 +12,13 @@ def home():
 
 @app.route("/post/new", methods = ['GET', 'POST'])
 def new_post():
-    # post=Post(title=form.title.data, content = form.content.data, date = datetime.now())
     if request.method == "POST":
-        pass
+        content = request.form['content']
+        data = {"content":content,"title":request.form['title']}
+        print(data)
+        response = requests.post("https://hackthevalley.herokuapp.com/insert",data=data)
+        print(response)
+        return redirect(url_for('home'))
     return render_template("insert.html")
 
 @app.route("/analytics")

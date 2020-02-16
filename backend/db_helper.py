@@ -39,8 +39,12 @@ class DBHelper:
         posts = self.get_posts()
         ids = []
         for i in posts:
-            ids.append(i['post_id'])
+            ids.append(int(i['post_id']))
 
         return max(ids)+1
+
+
+d = DBHelper()
+print(d.get_latest_id())
 
 
