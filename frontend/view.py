@@ -1,3 +1,5 @@
+
+
 from flask import Flask, render_template, url_for, flash, redirect, request
 #from frontend import app, db, bcrypt
 from datetime import datetime
@@ -21,6 +23,10 @@ def new_post():
     else:
         return render_template("insert.html")
 
+@app.route("/blank")
+def blank():
+    return render_template("blank.html",  posts=requests.get("https://hackthevalley.herokuapp.com/").json())
+
 @app.route("/analytics")
 def analytics():
     sentiments = requests.get("https://hackthevalley.herokuapp.com/sentiment").json()
@@ -40,3 +46,10 @@ def analytics():
 
     return render_template("analytics.html", sentiment_values = senti_vals, dates = dates, total = total, change = change, average = average)
 
+@app.route("/test")
+def test():
+    return render_template("test.html", urls=["https://www.youtube.com/embed/MmC4b7gPY0Q","https://www.youtube.com/embed/MmC4b7gPY0Q"])
+
+@app.route("/insert")
+def insert():
+    return render_template("insert.html")
