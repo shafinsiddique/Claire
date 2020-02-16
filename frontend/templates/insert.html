@@ -1,8 +1,10 @@
 {% extends "layout.html" %}
 
 {%block content%}
-
+<div class="container">
+  <div class="col-sm">
 <form>
+
   <div class="form-group">
     <label for="exampleFormControlInput1">Title</label>
     <input type="title" class="form-control" id="exampleFormControlInput1" placeholder="Enter title here">
@@ -11,6 +13,10 @@
     <label for="exampleFormControlTextarea1">Content</label>
     <textarea name= "content"class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="How are you feeling today?"></textarea>
   </div>
+  <input class="btn btn-primary" type="submit" value="Submit">
 </form>
-<input class="btn btn-primary" type="submit" value="Submit">
+</div>
+<div class="col-sm">
+  </div>
+</div>
 {% endblock %}
