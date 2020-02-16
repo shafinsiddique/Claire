@@ -1,7 +1,6 @@
 from PIL import Image
-from flask import Flask, render_template, url_for, flash, redirect, request, app
+from flask import Flask, render_template, url_for, flash, redirect, request
 #from frontend import app, db, bcrypt
-#from models import User, Post
 from datetime import datetime
 import requests
 
@@ -14,6 +13,9 @@ def home():
 @app.route("/post/new", methods = ['GET', 'POST'])
 def new_post():
     # post=Post(title=form.title.data, content = form.content.data, date = datetime.now())
+    if request.method == "POST":
+
+
     return render_template("new_entry.html")
 
 @app.route("/analytics")
