@@ -8,5 +8,6 @@ def home():
         return render_template("index.html", items=names)
     else:
         pass # do something else.
+        namesss = {'1': 'test'};
 
 
