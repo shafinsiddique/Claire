@@ -1,3 +1,5 @@
+
+
 from flask import Flask, render_template, url_for, flash, redirect, request
 #from frontend import app, db, bcrypt
 from datetime import datetime
@@ -20,6 +22,10 @@ def new_post():
         return render_template("home.html",posts=requests.get("https://hackthevalley.herokuapp.com/").json())
     else:
         return render_template("insert.html")
+
+@app.route("/blank")
+def blank():
+    return render_template("blank.html",  posts=requests.get("https://hackthevalley.herokuapp.com/").json())
 
 @app.route("/analytics")
 def analytics():
