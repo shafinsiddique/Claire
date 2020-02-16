@@ -17,8 +17,9 @@ def new_post():
         print(data)
         response = requests.post("https://hackthevalley.herokuapp.com/insert",data=data)
         print(response)
-        return redirect(url_for('home'))
-    return render_template("insert.html")
+        return render_template("home.html",posts=requests.get("https://hackthevalley.herokuapp.com/").json())
+    else:
+        return render_template("insert.html")
 
 @app.route("/analytics")
 def analytics():
