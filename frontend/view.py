@@ -26,7 +26,27 @@ def new_post():
 
 @app.route("/blank")
 def blank():
-    return render_template("blank.html",  posts=requests.get("https://hackthevalley.herokuapp.com/").json())
+    sentiments = requests.get("https://hackthevalley.herokuapp.com/sentiment").json()
+    senti_vals = []
+    dates = []
+    for entry in sentiments:
+        currVal = float(entry[1])
+        currDate = entry[0]
+        dates.append(currDate)
+        senti_vals.append(currVal)
+
+    total = len(dates)
+    change = senti_vals[-1] - senti_vals[-2]
+    change = round(change, 3)
+    average = sum(senti_vals) / len(senti_vals)
+    average = str(round(average, 2))
+    posts = requests.get("https://hackthevalley.herokuapp.com/").json()
+    newest = []
+    newest.append(posts[-3])
+    newest.append(posts[-2])
+    newest.append(posts[-1])
+
+    return render_template("blank.html", posts=newest, sentiment_values = senti_vals, dates = dates, total = total, change = change, average = average)
 
 @app.route("/analytics")
 def analytics():

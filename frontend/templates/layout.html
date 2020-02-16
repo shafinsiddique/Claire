@@ -1,41 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-      <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Hack The Valley</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+    <title>Recharge
+    </title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../static/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        .navbar-custom99 {
+            background-color: #8084e0;
+            height: 120px;
+        }
+
+        .card-header-custom1 {
+            background: #e1e2fb;
+        }
+
+        .maincustom2,
+        .mb-0 {
+            margin-left: 4rem !important;
+        }
+        /*css override */
+
+        #userDropdown,
+        #userDropdown2,
+        #userDropdown3 {
+            position: absolute;
+            bottom: 22%;
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        #userDropdown {
+            position: absolute;
+            right: 24%;
+        }
+
+        #userDropdown2 {
+            position: absolute;
+            right: 16%;
+        }
+
+        #userDropdown3 {
+            position: absolute;
+            right: 8%;
+        }
+    </style>
+
 </head>
-<body>
-<div id="app">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Hack The Valley</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="navbarToggle" class="navbar-collapse collapse">
-            <ul class="navbar-nav ml-auto">
-                <div class="navbar-nav mr-auto">
-                    <a class="nav-item nav-link" href="#">My Posts</a>
-                    <a class="nav-item nav-link" href="#">New Entry</a>
-                    <a class="nav-item nav-link" href="#">Analytics</a>
-                </div>
-            </ul>
-        </div>
-    </nav>
 
-</div>
-<br><br>
-<div class="container">
-    {% block content %}
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Content Wrapper -->
+        <div class="d-flex flex-column" id="content-wrapper">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <div id="navbarMAIN">
+
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow navbar-custom99">
+                        <!--                        <a class="nav-link" href="home" id="logo" class="navbar-left"><img src = "/static/claire.png">-->
+                        <!--                          -->
+                        <!--                        </a>-->
+
+                        <a class="navbar-brand" href="#"><img alt="Brand" src="/static/1finalclaire.png" class="img-responsive" /></a>
+
+                        <a class="nav-link" href="analytics" id="userDropdown" role="button">
+                            <span class="mr-2 d-none d-lg-inline">DASHBOARD</span>
+                        </a>
+
+                        <a class="nav-link" href="blank" id="userDropdown2" role="button">
+                            <span class="mr-2 d-none d-lg-inline">HOMEPAGE</span>
+                        </a>
+                        <a class="nav-link" href="insert" id="userDropdown3" role="button">
+                            <span class="mr-2 d-none d-lg-inline">NEW POST</span>
+                        </a>
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <!-- Topbar Navbar -->
+
+                    </nav>
+                </div>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container">
+                     {% block content %}
     {% endblock %}
 
-</div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="../vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="../js/demo/chart-area-demo.js"></script>
+
+    <script src="../js/demo/chart-pie-demo.js"></script>
+
+    </div>
+    </div>
 </body>
+
 </html>

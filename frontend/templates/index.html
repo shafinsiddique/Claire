@@ -1,8 +1,163 @@
-{% extends "layout.html" %}
-{% block content %}
-{% for item in items %}
+<!DOCTYPE html>
+<html lang="en">
 
-<p> {{item}} </p>
+<head>
 
-{% endfor %}
-{% endblock %}
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+
+    <title>Recharge
+    </title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../static/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        .navbar-custom99 {
+            background-color: #8084e0;
+            height: 120px;
+        }
+
+        .card-header-custom1 {
+            background: #e1e2fb;
+        }
+
+        .maincustom2,
+        .mb-0 {
+            margin-left: 4rem !important;
+        }
+        /*css override */
+
+        #userDropdown,
+        #userDropdown2,
+        #userDropdown3 {
+            position: absolute;
+            bottom: 22%;
+            font-size: 20px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        #userDropdown {
+            position: absolute;
+            right: 24%;
+        }
+
+        #userDropdown2 {
+            position: absolute;
+            right: 16%;
+        }
+
+        #userDropdown3 {
+            position: absolute;
+            right: 8%;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Content Wrapper -->
+        <div class="d-flex flex-column" id="content-wrapper">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <div id="navbarMAIN">
+
+                    <!-- Topbar -->
+                    <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow navbar-custom99">
+                        <!--                        <a class="nav-link" href="home" id="logo" class="navbar-left"><img src = "/static/claire.png">-->
+                        <!--                          -->
+                        <!--                        </a>-->
+
+                        <a class="navbar-brand" href="#"><img alt="Brand" src="/static/1finalclaire.png" class="img-responsive" /></a>
+
+                        <a class="nav-link" href="analytics" id="userDropdown" role="button">
+                            <span class="mr-2 d-none d-lg-inline">DASHBOARD</span>
+                        </a>
+
+                        <a class="nav-link" href="blank" id="userDropdown2" role="button">
+                            <span class="mr-2 d-none d-lg-inline">HOMEPAGE</span>
+                        </a>
+                        <a class="nav-link" href="insert" id="userDropdown3" role="button">
+                            <span class="mr-2 d-none d-lg-inline">NEW POST</span>
+                        </a>
+                        <!-- Sidebar Toggle (Topbar) -->
+                        <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggleTop">
+                            <i class="fa fa-bars"></i>
+                        </button>
+
+                        <!-- Topbar Navbar -->
+
+                    </nav>
+                </div>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container">
+
+                    <!-- Page Heading -->
+                    <div class=".col-sm-5 .col-md-6">
+                        <h1 class="h3 mb-0 text-gray-800">New Entry Recorded</h1>
+                        <span><br></span>
+                    </div>
+
+                    <div class="card shadow mb-4 maincustom2">
+                        <div class="card-header py-3 card-header-custom1">
+                            <h6 class="m-0 font-weight-bold">{{title}}</h6>
+                        </div>
+                        <div class="card-body">
+                            <h7>{{ content }}</h7>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="../js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="../vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="../js/demo/chart-area-demo.js"></script>
+
+    <script src="../js/demo/chart-pie-demo.js"></script>
+
+    </div>
+    </div>
+</body>
+
+</html>
