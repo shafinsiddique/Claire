@@ -1,5 +1,3 @@
-
-
 from flask import Flask, render_template, url_for, flash, redirect, request
 #from frontend import app, db, bcrypt
 from datetime import datetime
@@ -75,6 +73,12 @@ def test():
 def insert():
     return render_template("insert.html")
 
-@app.route("/upload")
+@app.route("/upload",methods=['POST'])
 def upload():
-    return render_template("upload.html")
+    if request.method == "POST":
+        return render_template("upload.html")
+
+    url = request.form['URL']
+
+    requests.post("https://hackthevalley.herokuapp.com/"+url)
+    return redirect(url_for('blank'))
