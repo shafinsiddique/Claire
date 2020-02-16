@@ -73,12 +73,11 @@ def test():
 def insert():
     return render_template("insert.html")
 
-@app.route("/upload",methods=['POST'])
+@app.route("/upload",methods=['GET','POST'])
 def upload():
     if request.method == "POST":
+        url = request.form['URL']
+        print(requests.post("https://hackthevalley.herokuapp.com/photo",data={'url':url}))
+        return redirect(url_for('blank'))
+    else:
         return render_template("upload.html")
-
-    url = request.form['URL']
-
-    requests.post("https://hackthevalley.herokuapp.com/"+url)
-    return redirect(url_for('blank'))

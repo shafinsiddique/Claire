@@ -37,8 +37,10 @@ def insert_post():
 def sentiment():
     return jsonify(db.get_sentiment())
 
-@app.route('/photo/<url>',methods=['POST'])
-def photo_convert(url):
+@app.route('/photo/',methods=['POST'])
+def photo_convert():
+    url = request.form['url']
+    print(url)
     post = {}
     post['content'] = detect_text_uri(url)
     post['sentiment'] = get_sentiment(post['content'])
@@ -47,7 +49,6 @@ def photo_convert(url):
     now = datetime.datetime.now()
     post['date'] = now.strftime("%m/%d/%Y")
     db.insert_post(post)
-
     return jsonify(db.get_posts())
 
 if __name__ == "__main__":
