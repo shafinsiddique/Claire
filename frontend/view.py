@@ -40,3 +40,10 @@ def analytics():
 
     return render_template("analytics.html", sentiment_values = senti_vals, dates = dates, total = total, change = change, average = average)
 
+@app.route("/test")
+def test():
+    return render_template("test.html", urls=["https://www.youtube.com/embed/MmC4b7gPY0Q","https://www.youtube.com/embed/MmC4b7gPY0Q"])
+
+@app.route("/insert")
+def insert():
+    return render_template("insert.html")
