@@ -1,4 +1,3 @@
-from PIL import Image
 from flask import Flask, render_template, url_for, flash, redirect, request
 #from frontend import app, db, bcrypt
 from datetime import datetime
@@ -19,18 +18,14 @@ def new_post():
 
 @app.route("/analytics")
 def analytics():
-    return render_template("analytics.html")
+    sentiments = requests.get("https://hackthevalley.herokuapp.com/sentiment").json()
+    senti_vals = []
+    dates = []
+    for entry in sentiments:
+        currVal = float(entry[1])
+        currDate = entry[0]
+        dates.append(currDate)
+        senti_vals.append(currVal)
 
- #@app.route('/post/<post_id>')
-## def post(post_id):
-# def post(post_id):
-#     post = Post.query.get_or_404(post_id)
-#     return render_template("post.html", title=post.title, post=post)
+    return render_template("analytics.html", sentiment_values = senti_vals, dates = dates)
 
-#routes,form for post
-
-#git add *
-#git commit -m "sdfsadfasdf"
-#git push
-
-#git pull
