@@ -1,6 +1,7 @@
 from flask import Flask, render_template, url_for, flash, redirect, request
 #from frontend import app, db, bcrypt
 from datetime import datetime
+from backend.twitter_api import get_urls
 import requests
 
 app = Flask(__name__)
@@ -17,8 +18,9 @@ def new_post():
         data = {"content":content,"title":request.form['title']}
         print(data)
         response = requests.post("https://hackthevalley.herokuapp.com/insert",data=data)
+        urls = requests.post(https://hackthevalley.herokuapp.com/tweet").json()
         print(response)
-        return render_template("videos.html", title = title, content = content, urls=response.json(), )
+        return render_template("videos.html", title = title, content = content, urls=response.json(), tweets=urls)
     else:
         return render_template("insert.html")
 

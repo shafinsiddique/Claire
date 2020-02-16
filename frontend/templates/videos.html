@@ -126,7 +126,9 @@
                     <div class="container">
                     <div class="row justify-content-center">
                      <div class="col-8 text-center">
-                              {%block content%} {%for video in urls%}
+                    {%block content%}
+
+                    {%for video in urls%}
 
                     <iframe width="560" height="315" src={{video}} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -134,12 +136,11 @@
 
                     {%for tweet in tweets%}
 
-                    <blockquote class="twitter-tweet"><p lang="en" dir="ltr"></p>&mdash; NON BLACKs ANTI (@SUPERI0RTEEZ) <a href="https://twitter.com/SUPERI0RTEEZ/status/1228871203810467840?ref_src=twsrc%5Etfw">February 16, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    {{tweet}}
 
                     {% endfor %}
 
-
-                     {% endblock %}
+                    {% endblock %}
 
                      </div>
                     </div>
