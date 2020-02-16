@@ -10,7 +10,6 @@ class DBHelper:
     def get_posts(self):
         cursor = self.mongocollection.find({})
         post_objects = []
-
         for posts in cursor:
             post_object = posts
             del post_object['_id']

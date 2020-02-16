@@ -14,7 +14,7 @@ def home():
 def new_post():
     # post=Post(title=form.title.data, content = form.content.data, date = datetime.now())
     if request.method == "POST":
-
+        pass
 
     return render_template("new_entry.html")
 
@@ -22,12 +22,9 @@ def new_post():
 def analytics():
     return render_template("analytics.html")
 
-<<<<<<< HEAD
  #@app.route('/post/<post_id>')
 ## def post(post_id):
-=======
 # def post(post_id):
->>>>>>> b4e0fd11b023c67f87240cbd2b56cb6ff4434028
 #     post = Post.query.get_or_404(post_id)
 #     return render_template("post.html", title=post.title, post=post)
 
