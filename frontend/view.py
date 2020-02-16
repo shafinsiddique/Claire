@@ -30,15 +30,15 @@ def new_post():
 def analytics():
     return render_template("analytics.html")
 
- @app.route('/post/<post_id>')
-# def post(post_id):
+ #@app.route('/post/<post_id>')
+## def post(post_id):
 #     post = Post.query.get_or_404(post_id)
 #     return render_template("post.html", title=post.title, post=post)
 
 #routes,form for post
 
 #git add *
-#git commit /m "sdfsadfasdf"
+#git commit -m "sdfsadfasdf"
 #git push
 
 #git pull
