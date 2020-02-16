@@ -18,7 +18,8 @@ def insert_post():
         post['content'] = request.form['content']
         post['title'] = request.form['title']
         post['sentiment'] = get_sentiment(request.form['title'])
-        post['date'] = datetime.datetime.now()
+        now = datetime.datetime.now()
+        post['date'] = now.strftime("%m/%d/%Y")
         post['post_id'] = db.get_latest_id()
         print(post)
         db.insert_post(post)
@@ -28,10 +29,6 @@ def insert_post():
 def sentiment():
     return jsonify(db.get_sentiment())
 
-
 if __name__ == "__main__":
     # print(get_sentiment("Hello World"))
     app.run(debug=False)
-
-
-
