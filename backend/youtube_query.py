@@ -1,7 +1,7 @@
 import requests
 from googleapiclient.discovery import build
 from google.cloud import vision
-api_key = "AIzaSyCw_3pcvHzyWVhepo2aqfubkOnlJFh1oj0"
+api_key = "AIzaSyDwBzTvWD6H1uBUXrUcePZJ_tJqd-OBhts"
 youtube = build('youtube', 'v3', developerKey=api_key)
 subscription_key = "3d6903da0e4f4ccd9bd1aff31a51fb1d"
 endpoint = "https://shafinsiddique.cognitiveservices.azure.com/"
@@ -48,6 +48,6 @@ def get_key_phrases(text):
 
 
 if __name__ == "__main__":
-    pass
+    detect_text_uri("https://i.ibb.co/PZ9rqj1/87026836-615709365674790-6077908714214391808-n.jpg")
 
 

@@ -11,101 +11,6 @@ def home():
 
 @app.route("/post", methods = ['GET', 'POST'])
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def new_post():
     if request.method == "POST":
         content = request.form['content']
@@ -113,9 +18,8 @@ def new_post():
         data = {"content":content,"title":request.form['title']}
         print(data)
         response = requests.post("https://hackthevalley.herokuapp.com/insert",data=data)
-        urls = requests.post("https://hackthevalley.herokuapp.com/tweet").json()
         print(response)
-        return render_template("videos.html", title = title, content = content, urls=response.json())
+        return render_template("videos.html", title=title, content=content, urls=response.json())
     else:
         return render_template("insert.html")
 
@@ -169,6 +73,10 @@ def test():
 @app.route("/insert")
 def insert():
     return render_template("insert.html")
+
+@app.route("/all")
+def entries():
+    return render_template("entries.html", posts=requests.get("https://hackthevalley.herokuapp.com/").json())
 
 @app.route("/upload",methods=['GET','POST'])
 def upload():

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{%block content%}
+
+<div class="container">
+   {% for post in posts %}
+
+                        <div class="card shadow mb-4 maincustom2">
+                            <div class="card-header py-3 card-header-custom1">
+                                <h6 class="m-0 font-weight-bold">{{ post.title }}</h6>
+                            </div>
+                            <div class="card-body">
+                                <h7>{{ post.content }}</h7>
+
+                            </div>
+                        </div>
+                        {% endfor %}
+</div>
+
+
+
+{% endblock %}
